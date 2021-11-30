@@ -58,9 +58,15 @@ ssh alishh-ag-ma
 
 ssh ag-wb-01
 
-/home/ymserver/bin/dump_data/node_modules/.bin/elasticdump --type=data --concurrency=8 --searchBody='{"query": {"bool": {"filter": {"range": {"min_dt": {"gte": "2021-04-25"}}}}}}' --input=http://ag_adm:5Ot2PJOC7mtnNIsz@es-test.ag.alishh:9200/material --output=http://ag_adm:5Ot2PJOC7mtnNIsz@es-test.ag.alishh:9200/material_v2 --limit=2000
+/home/ymserver/bin/dump_data/node_modules/.bin/elasticdump --type=data --concurrency=8 --searchBody='{"query": {"bool": {"filter": {"range": {"min_dt": {"gte": "2019-09-06"}}}}}}' --input=http://elastic:nZ3gpnW47PGp@es-cn-v0h0ly9io00071cps.elasticsearch.aliyuncs.com:9200/landpage --output=http://elastic:nZ3gpnW47PGp@es-cn-v0h0ly9io00071cps.elasticsearch.aliyuncs.com:9200/landpage_v1 --limit=3000
 --input 源数据
 --output 目的数据
+
+/home/ymserver/bin/dump_data/node_modules/.bin/elasticdump --type=data --concurrency=8 --searchBody='{"query": {"bool": {"filter": {"range": {"min_dt": {"gte": "2019-09-06"}}}}}}' --input=http://elastic:nZ3gpnW47PGp@es-cn-v0h0ly9io00071cps.elasticsearch.aliyuncs.com:9200/landpage --output=http://ag-pgm:l0ng-r4nd0m@es-cn-7pp29nzdq001dccjy.elasticsearch.aliyuncs.com:9200/landpage --limit=3000
+--input 源数据
+--output 目的数据
+
+http://ag-pgm:l0ng-r4nd0m@es-cn-7pp29nzdq001dccjy.elasticsearch.aliyuncs.com:9200
 
 $DJ_SCRIPT/yugong/ag/ad_aggs_outer_shop.sh
 
